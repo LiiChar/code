@@ -1,0 +1,23 @@
+$zero: 0;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(253, 193, 58);
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.dark {
+  background-color: rgb(48, 48, 47);
+}
+
+.light {
+background-color: rgb(253, 193, 58);
+}

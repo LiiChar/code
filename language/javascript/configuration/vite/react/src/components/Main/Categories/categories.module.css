@@ -1,0 +1,18 @@
+
+.categories {
+    margin-top: 15vh;
+    margin-bottom: 10vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+@media (max-width: 650px) {
+    .categories { 
+        margin: 20px 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

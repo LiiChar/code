@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":";;;;;AAAA,CAAC,MAAM;EACHA,OAAO,CAACC,GAAG,CAAC,MAAM,CAAC;AACvB,CAAC,EAAE,CAAC,C","sources":["webpack://react/./src/index.js"],"sourcesContent":["(() => {\r\n    console.log('work');\r\n})()"],"names":["console","log"],"sourceRoot":""}

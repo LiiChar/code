@@ -1,0 +1,39 @@
+.aside {
+    width: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around   ;
+    max-width: 200px;
+}
+
+
+
+.account {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.unregister {}
+
+.unregisterLink {
+    display: flex;
+    justify-content: center;
+}
+
+.unregisterImg {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    padding-bottom: 20px;
+}
+
+.registerLink {}
+
+.registerImg {}
+
+@media (max-width: 650px) {
+
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+
+    <script src="js/chat.js" defer></script>
+    <script src="js/bottle.js" defer></script>
+    <link href="css/global.css" rel="stylesheet">
+    <title>Bottle game</title>
+</head>
+
+<body>
+    <div class="wrapperSpinner">
+        <img class="bottle" src="./stuff/model/bottle.svg" alt="Triangle with three unequal sides" />
+        <div class="flipBottle">
+            <canvas id="canvas"></canvas>
+        </div>
+        <button id="start">Крутить</button>
+    </div>
+    <div class="chat">
+        <div id="log"></div>
+        <div>
+            <input type="text" id="input" autofocus><input type="submit" id="send" value="Send">
+        </div>
+    </div>
+</body>
+
+</html>

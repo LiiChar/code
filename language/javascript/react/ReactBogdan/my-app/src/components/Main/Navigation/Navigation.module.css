@@ -1,0 +1,30 @@
+.Nav {
+    justify-items: space-around;
+    align-self: start;
+    grid-area: n;
+    background-color: rgb(149, 174, 255);
+  
+  }
+
+
+
+
+.NavContent {
+    margin: 0px 10px;
+}
+
+.NavContent a{
+    color: white;
+    text-decoration: none;
+}
+
+.navElem.active {
+    color: aqua;
+}
+
+
+/*.NavContent a:focus{*/
+/*    outline: none;*/
+/*    color: gold;*/
+/*    text-decoration: underline;*/
+/*}*/

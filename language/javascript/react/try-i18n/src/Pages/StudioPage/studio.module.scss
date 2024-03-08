@@ -1,0 +1,57 @@
+@import '../../app.module.scss';
+
+.wrapperStudio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.studio {
+    width: 60%;
+    height: 100%;
+}
+
+.wrapperTitle {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.title {
+    color: white;
+    font-size: 180px;
+}
+
+.wrapperImage {
+    width: 50%;
+}
+
+.imageStudio {
+    height: 100%;
+    width: 100%;
+    border-radius: 14px;
+}
+
+.articleWrapper {
+    display: flex;
+    gap: 120px;
+    height: 85vh;
+    margin-top: 160px;
+}
+
+.paragraph {
+    margin-top: 20px;
+}
+
+.titleArticle {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.wrapperInfo {
+    font-size: 26px;
+    width: 50%;
+}

@@ -1,0 +1,14 @@
+{
+	"compilerOptions": {
+		"lib": ["DOM", "es5"],
+		"module": "es6",
+		"allowJs": true,
+		"outDir": "./dist",
+		"sourceMap": false,
+		"strict": true,
+		"rootDir": "src"
+		/* Bundler mode */
+	},
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules", "**/*.spec.ts"]
+}

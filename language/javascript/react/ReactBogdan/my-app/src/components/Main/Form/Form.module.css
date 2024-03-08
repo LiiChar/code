@@ -1,0 +1,25 @@
+.Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Insert {
+    font-size: 20px;
+    margin-left: 9vw;
+    align-self: flex-start;
+}
+
+.Input {
+
+    align-self: center;
+}
+
+.InputContent {
+    width: 70vw;
+}
+
+.Btn {
+    align-self: flex-end;
+    margin-right: 9vw;
+}

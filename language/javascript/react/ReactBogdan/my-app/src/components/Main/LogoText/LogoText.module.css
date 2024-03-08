@@ -1,0 +1,14 @@
+.LogText {
+    display: flex;
+    flex-direction: row;
+}
+
+.LogText p {
+    display: flex;
+    flex-direction: column;
+}
+
+.LogText p:first-child {
+    margin-top: 0px;
+}
+

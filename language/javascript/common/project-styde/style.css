@@ -1,0 +1,195 @@
+.card{
+    margin-bottom: 10px 15px;
+    background-color: #bbb;
+    border: 2px rgb(153, 153, 153);
+}
+h1#hello { 
+    
+    color:red ;
+    font-size: 15px;
+    border-left: 3px ;
+}
+
+span.fact {
+    color: blue;
+}
+
+span.space{
+    letter-spacing: 4px;
+    word-spacing: 10px;
+}
+
+span.size{
+    font-size: 45px;
+}
+
+span.line{
+    border: 3px solid gray ;
+    border-radius: 10px;
+    /* или мы можем использовать
+    border-width: 3px;
+    border-style: solid;
+    border-color: blue;
+    border-radius: 10px; - закругление границ*/
+
+}
+span.back{
+    background: red;
+}
+
+span.margin{
+    margin-left: 115px;
+    background-color: tomato;
+    
+}
+span.padding{
+    padding-right: 100px;
+    padding-left: 12px;
+    background-color: #bbb;
+}
+
+span.famili{
+    font-family: Geneva;
+}
+
+span.fsize{
+    font-size: 10px;
+}
+
+span.lheight{
+    background-color: darkgoldenrod;
+    border: 2px gray;
+}
+
+div.pe{
+    line-height: 19px;
+    background-color: #ddd;
+}
+
+span.strong{
+    font-weight: bold;
+}
+
+span.decor{
+    text-decoration: underline line-through ;
+}
+
+span.me{
+    font-style: oblique;
+}
+
+a{
+    color: darkmagenta;
+    text-decoration: none;
+}   
+/*  */
+a:hover{
+    color: indianred; /* Hover при наведении на люьой обёкет цвет меняется гна указаный  */
+
+}
+
+.btn{
+    cursor: pointer; /*Cursor при наведение на кнопку меняет рурсок на нужный  */
+}
+
+.list{
+    margin: 0;
+    padding: 0;
+}
+
+.tbl{
+    width: 50%;
+    
+}
+
+.tbl td{
+    text-align: center; /*Выравнивание текста  */
+}
+
+/* Только для списков и таблиц */
+
+.tbl tr:nth-child(even) {
+    background-color: rgb(206, 122, 122); /* even для чётных строк */
+}
+
+.tbl tr:nth-child(odd) {
+    background-color: rgb(142, 141, 235); /* odd для нечётных строк */
+}
+
+.tbl tr:nth-child(3) {
+    background-color: rgb(147, 236, 139); /* можно просто вводить строки или столбаца */
+}
+
+.navigat{
+    background: rgb(252, 205, 212);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.navigat ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin: 0px 20px;
+}
+
+.navigat ul li{
+    margin-right: 100px;
+    text-align: center;
+    padding: 10px;
+}
+
+.navigat ul li:hover{
+    background: rgb(245, 102, 102);
+}
+
+.navigat ul li:last-child {
+    margin-right: 0;
+}
+
+.img {
+    height: 400px;
+    display: block;
+    margin: 5px auto;
+}
+
+.ground{
+    position: relative;
+    border: 4px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+.box {
+    position: absolute;
+    /* top: 0;
+    left: 0; */
+    bottom: 120px;
+    right: 120px;
+    background: coral;
+    width: 50px;
+    height: 50px;
+}
+
+.lor{
+    background-color: #eee;
+    padding: 20px;
+    max-width: 850px;
+    text-align: left;
+}
+/* Если ширина экрана бедет меньше 500px то сработает @media */
+@media(max-width:800px) {
+.lor{
+    background:rgb(147, 236, 139);
+    padding: 10px;
+    text-align: center;
+}
+}
+
+.date {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

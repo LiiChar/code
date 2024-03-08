@@ -1,0 +1,50 @@
+
+
+.categoryCard {
+    width: 45%;
+    height: 35%;
+    margin-left: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.categoryName {
+    position: relative;
+    transform: translateY(20px) translateX(20px);
+    z-index: 100;
+}
+
+.categoryImg {
+
+}
+
+@media (max-width: 650px) {
+    .categoryCard {
+        width: 80%;
+        margin: 0 10% 0 10%;
+        height: 35%;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+    .categoryName {
+        position: relative;
+        transform: translateY(40px) translateX(20px);
+        z-index: 100;
+    }
+}
+
+
+@media (min-width: 1000px) {
+    .categoryCard {
+        width: 45%;
+        height: 40%;
+        font-size: 24px;
+    }
+
+    .categoryName {
+        position: relative;
+        transform: translateY(40px) translateX(20px);
+        z-index: 100;
+    }
+}

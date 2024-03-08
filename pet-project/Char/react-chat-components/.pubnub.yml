@@ -1,0 +1,261 @@
+---
+name: pubnub-react-chat-components
+version: v0.32.0
+scm: github.com/pubnub/react-chat-components
+schema: 1
+files:
+  - lib/dist/index.js
+  - lib/dist/index.es.js
+changelog:
+  - date: 2023-10-05
+    version: v0.32.0
+    changes:
+      - type: bug
+        text: "ReactNative - remove the workaround for poor performance of inverted FlatList in Android ."
+  - date: 2023-10-04
+    version: v0.31.0
+    changes:
+      - type: feature
+        text: "Make it possible to send both text and file in one message."
+  - date: 2023-07-20
+    version: v0.30.0
+    changes:
+      - type: bug
+        text: "Focusing on EmojiInput after selecting emoji only worked in certain cases."
+      - type: bug
+        text: "Console warnings about unknown attributes in MessageInput."
+  - date: 2023-07-17
+    version: v0.29.0
+    changes:
+      - type: feature
+        text: "MessageInput - allow passing default input field attributes."
+      - type: feature
+        text: "MessageInput - new sendMessageOnSubmitEditing option in React Native."
+      - type: feature
+        text: "MessageInput - focus on the field after selecting emoji in React."
+  - date: 2023-06-27
+    version: v0.28.0
+    changes:
+      - type: feature
+        text: "MessageInput - actionsAfterInput option to reorder elements."
+  - date: 2023-04-19
+    version: v0.27.0
+    changes:
+      - type: feature
+        text: "ReactNative - Fix uuid not being bundled correctly."
+  - date: 2023-04-18
+    version: v0.26.0
+    changes:
+      - type: feature
+        text: "ReactNative - support for Expo 48. Previous Expo versions are no longer guaranteed to work correctly."
+  - date: 2023-04-17
+    version: v0.25.0
+    changes:
+      - type: feature
+        text: "Remove a warning about missing onKeyPress."
+  - date: 2023-04-11
+    version: v0.24.0
+    changes:
+      - type: feature
+        text: "Return change event and expose onKeyPress callback."
+  - date: 2023-04-04
+    version: v0.23.0
+    changes:
+      - type: bug
+        text: "Fix not being able to click on emojis on the last message of the Message List."
+  - date: 2023-03-28
+    version: v0.22.0
+    changes:
+      - type: feature
+        text: "UseUserMemberships hook and useChannelMembers - make sure that both channel and user custom metadata fields are present in the hooks' responses."
+  - date: 2023-03-27
+    version: v0.21.0
+    changes:
+      - type: feature
+        text: "UseUserMemberships hook - fix custom fields not being appended to the hook return value."
+  - date: 2023-01-17
+    version: v0.20.0
+    changes:
+      - type: feature
+        text: "ReactNative - added file upload functionality."
+      - type: feature
+        text: "Chat - added getUser callback to load user's metadata when first seen."
+  - date: 2023-01-02
+    version: v0.19.0
+    changes:
+      - type: feature
+        text: "MessageList - add message reactions on React Native."
+  - date: 2022-12-05
+    version: v0.18.0
+    changes:
+      - type: bug
+        text: "MessageList - problem with inverted list in React Native ~0.70 on Android."
+  - date: 2022-11-21
+    version: v0.17.0
+    changes:
+      - type: bug
+        text: "MessageList - Include meta data for historic messages."
+  - date: 2022-11-14
+    version: v0.16.0
+    changes:
+      - type: bug
+        text: "MessageInput - Same message can be sent twice if Enter key is pressed repeatedly."
+      - type: bug
+        text: "MessageInput - Auto-sizing of MessageInput does not always work."
+  - date: 2022-11-09
+    version: v0.15.0
+    changes:
+      - type: bug
+        text: "MessageList - infinite scrolling breaks if history limit is set over 25."
+  - date: 2022-10-18
+    version: v0.14.0
+    changes:
+      - type: feature
+        text: "Initial release for React Native components package."
+  - date: 2022-09-08
+    version: v0.13.0
+    changes:
+      - type: feature
+        text: "MessageList - added option for custom file renderer."
+      - type: bug
+        text: "MessageList/MessageInput - outdated interface for emoji-mart peer dependency."
+      - type: bug
+        text: "MessageList - non intended auto scrolling of parent elements."
+  - date: 2022-07-05
+    version: v0.12.0
+    changes:
+      - type: bug
+        text: "All custom hooks returning double results when used with React 18."
+  - date: 2022-06-22
+    version: v0.11.0
+    changes:
+      - type: feature
+        text: "Update payload structures to match other platform implementations."
+      - type: feature
+        text: "Update typings for Users and Channels."
+  - date: 2022-05-18
+    version: v0.10.0
+    changes:
+      - type: fix
+        text: "MessageInput - user metadata not attached to File messages with senderInfo option enabled."
+      - type: fix
+        text: "Channel/MemberList - disable default flex shrinking of some UI elements (e.g. avatars)."
+  - changes:
+      - text: Channel/MemberList - added option for custom sorting
+        type: feature
+      - text: MessageInput - added onBeforeSend callback prop to handle changes to message payloads
+        type: feature
+      - text: MessageList - limit the shown number of instances for a single reaction to 99
+        type: feature
+    date: 2022-04-20
+    version: v0.9.0
+  - changes:
+      - text: MessageList - tooltips showing the authors of message reactions
+        type: feature
+      - text: Channel/MemberList - truncating long titles and descriptions with ellipses
+        type: feature
+      - text: Chat - automatic unsubscribes on channels that were removed from the 'channels' option
+        type: feature
+      - text: Chat - root callbacks (like onMessage) not getting updated after external change
+        type: fix
+      - text: Chat - root callbacks causing problems with Components when throwing errors internally
+        type: fix
+      - text: TypingIndicator - showing current user's indicator
+        type: fix
+      - text: MessageList - inconsistent automatic scrolling behavior
+        type: fix
+      - text: MessageInput - selecting emojis clears current input
+        type: fix
+      - text: MessageInput - sending whitespace-only messages
+        type: fix
+      - text: useChannelMembers and useUserMemberships - fix and refactor event listeners
+        type: fix
+    date: 2022-02-07
+    version: v0.8.0
+  - changes:
+      - text: MessageInput - wrong spinner icon sizing
+        type: fix
+      - text: MessageInput - unwanted scrollbar showing up
+        type: fix
+      - text: MessageInput - textarea sizing after sending multi-line messages
+        type: fix
+    date: 2021-10-27
+    version: v0.7.0
+  - changes:
+      - text: Major components redesign
+        type: feature
+      - text: Telemetry
+        type: feature
+      - text: MemberList - selfText property
+        type: feature
+      - text: MemberList - on member click callback
+        type: feature
+      - text: MessageList - automatic 12h/24h time format based on locale
+        type: feature
+      - text: useUserMemberships - prevent parallel re-fetches
+        type: feature
+      - text: useChannelMembers - prevent parallel re-fetches
+        type: feature
+      - text: useUserMemberships - remove reacting to other channel/uuid events
+        type: fix
+      - text: useChannelMembers - remove reacting to other channel/uuid events
+        type: fix
+    date: 2021-10-15
+    version: v0.6.0
+  - changes:
+      - text: MemberList present member indicators
+        type: feature
+      - text: MemberList extra actions renderer
+        type: feature
+      - text: MessageInput extra actions renderer
+        type: feature
+      - text: useChannelMembers fetching too many results
+        type: fix
+    date: 2021-09-06
+    version: v0.5.0
+  - changes:
+      - text: Basic file/image upload and display using Files API
+        type: feature
+      - text: Changes to the default theme color palette
+        type: feature
+      - text: Support for message edits/removals and extra actions renderer in MessageList
+        type: feature
+      - text: Spinner loader for MessageInput send button
+        type: feature
+      - text: ChannelList extra actions renderer
+        type: feature
+      - text: Add new disabled state in MessageInput
+        type: feature
+      - text: Ability to refetch data in useChannelMembers and useUserMemberships
+        type: feature
+      - text: Renamed Message interface to MessageEnvelope, added StandardMessage and FileMessage
+        type: feature
+      - text: Improved MessageList scrolling behavior and detection
+        type: fix
+      - text: useUser and useUserMemberships hook typings
+        type: fix
+      - text: usePresence hook options memoization
+        type: fix
+    date: 2021-08-25
+    version: v0.4.0
+  - changes:
+      - text: Remove default subscription to the 'user channel'
+        type: feature
+    date: 2021-08-09
+    version: v0.3.0
+  - changes:
+      - text: Remove internal emoji picker component
+        type: feature
+      - text: Add 'refetch' option to usePresence hook
+        type: feature
+      - text: Remove default welcome messages on MessageList
+        type: improvement
+      - text: Improve the display of actions/reactions on certain themes
+        type: improvement
+    date: 2021-04-30
+    version: v0.2.0
+  - changes:
+      - text: Initial public release
+        type: feature
+    date: 2021-04-09
+    version: v0.1.0

@@ -1,0 +1,70 @@
+.wrapMusicScroll {
+    margin-top: 13px;
+    height: calc(24vh + 18px);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.musicScrollElement {
+    height: 8vh;
+    width: 45%;
+    gap: 10px;
+    padding-right: 10px;
+}
+
+.wrapperArrawLeft {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    left: 0;
+    z-index: 40;
+    cursor: pointer;
+} 
+
+.wrapperArrawRight {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    right: 0;
+    z-index: 40;
+    top: 0;
+    cursor: pointer;
+   
+} 
+
+
+.arrowLeft {
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.616);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    color:white;
+}
+
+.wrapperMusicList {
+    position: relative;
+}
+
+.arrowRight {
+    text-align: center;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.616);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    color:white;
+
+}

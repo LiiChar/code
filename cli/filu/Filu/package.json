@@ -1,0 +1,22 @@
+{
+  "name": "filu",
+  "version": "0.0.3",
+  "description": "Upload file and download file at service",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "filu": "./bin/index.js"
+  },
+  "keywords": [
+    "api",
+    "file loader",
+    "file upload",
+    "copy file"
+  ],
+  "author": "Kypator",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "cli-progress": "^3.12.0"
+  }
+}

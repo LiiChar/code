@@ -1,0 +1,28 @@
+.slad {
+    height: 300px;
+    width: 300px;
+    border: 2px  solid black;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slad-line {
+    position: relative;
+    left: 0px;
+    display: flex;
+    height: 100px;
+    width: 300px;
+    margin: 0 auto;
+    transition: all ease 1000ms;
+}
+
+
+
+button {
+    display: flex;
+    justify-self: center;
+    height: 50px;
+    width: 100px;
+
+}

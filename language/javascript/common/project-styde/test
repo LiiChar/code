@@ -1,0 +1,409 @@
+//  Методы работы со строками
+
+
+
+
+
+
+Math.floor
+Округление в меньшую сторону: 3.1 становится 3, а -1.1 — -2.
+Math.ceil
+Округление в большую сторону: 3.1 становится 4, а -1.1 — -1.
+Math.round
+Округление до ближайшего целого: 3.1 становится 3, 3.6 — 4, а -1.1 — -1.
+Math.trunc (не поддерживается в Internet Explorer)
+Производит удаление дробной части без округления: 3.1 становится 3, а -1.1 — -1.
+
+
+isNaN(value) преобразует значение в число и проверяет является ли оно NaN:
+alert( isNaN(NaN) ); // true
+alert( isNaN("str") ); // true
+Нужна ли нам эта функция? Разве не можем ли мы просто сравнить === NaN? К сожалению, нет. Значение NaN уникально тем, что оно не является равным ни чему другому, даже самому себе:
+alert( NaN === NaN ); // false
+isFinite(value) преобразует аргумент в число и возвращает true, если оно является обычным числом, т.е. не NaN/Infinity/-Infinity:
+alert( isFinite("15") ); // true
+alert( isFinite("str") ); // false, потому что специальное значение: NaN
+alert( isFinite(Infinity) ); // false, потому что специальное значение: Infinity
+
+
+Работает с NaN: Object.is(NaN, NaN) === true, здесь он хорош.
+Значения 0 и -0 разные: Object.is(0, -0) === false, это редко используется, но технически эти значения разные.
+Во всех других случаях Object.is(a, b) идентичен a === b.
+Этот способ сравнения часто используется в спецификации JavaSc
+
+
+Второй аргумент parseInt(str, radix)
+Функция parseInt() имеет необязательный второй параметр. Он определяет систему счисления, таким образом parseInt может также читать строки с шестнадцатеричными числами, двоичными числами и т.д.:
+alert( parseInt('0xff', 16) ); // 255
+alert( parseInt('ff', 16) ); // 255, без 0x тоже работает
+alert( parseInt('2n9c', 36) ); // 123456
+alert( parseInt('100px') ); // 100
+alert( parseFloat('12.5em') ); // 12.5
+alert( parseInt('12.3') ); // 12, вернётся только целая часть
+alert( parseFloat('12.3.4') ); // 12.3, произойдёт остановка чтения на второй точке
+
+Math.random()
+Возвращает псевдослучайное число в диапазоне от 0 (включительно) до 1 (но не включая 1)
+alert( Math.random() ); // 0.1234567894322
+alert( Math.random() ); // 0.5435252343232
+alert( Math.random() ); // ... (любое количество псевдослучайных чисел)
+Math.max(a, b, c...) / Math.min(a, b, c...)
+Возвращает наибольшее/наименьшее число из перечисленных аргументов.
+alert( Math.max(3, 5, -10, 0, 1) ); // 5
+alert( Math.min(1, 2) ); // 1
+Math.pow(n, power)
+Возвращает число n, возведённое в степень power
+alert( Math.pow(2, 10) ); // 2 в степени 10 = 1024
+В объекте Math есть множество функций и констант, включая тригонометрические функции, подробнее можно ознакомиться в документации по объекту Math.
+
+
+Методы toLowerCase() и toUpperCase() меняют регистр символов:
+alert( 'Interface'.toUpperCase() ); // INTERFACE
+alert( 'Interface'.toLowerCase() ); // interface
+Если мы захотим перевести в нижний регистр какой-то конкретный символ:
+alert( 'Interface'[0].toLowerCase() ); // 'i'
+
+
+Первый метод — str.indexOf(substr, pos).
+Он ищет подстроку substr в строке str, начиная с позиции pos, и возвращает позицию, на которой располагается совпадение, либо -1 при отсутствии совпадений.
+Например:
+let str = 'Widget with id';
+alert( str.indexOf('Widget') ); // 0, потому что подстрока 'Widget' найдена в начале
+alert( str.indexOf('widget') ); // -1, совпадений нет, поиск чувствителен к регистру
+alert( str.indexOf("id") ); // 1, подстрока "id" найдена на позиции 1 (..idget with id
+~n равно -(n+1).
+
+
+Более современный метод str.includes(substr, pos) возвращает true, если в строке str есть подстрока substr, либо false, если нет.
+Это — правильный выбор, если нам необходимо проверить, есть ли совпадение, но позиция не нужна:
+alert( "Widget with id".includes("Widget") ); // true
+alert( "Hello".includes("Bye") ); // false
+Необязательный второй аргумент str.includes позволяет начать поиск с определённой позиции:
+alert( "Midget".includes("id") ); // true
+alert( "Midget".includes("id", 3) ); // false, поиск начат с позиции 3
+Методы str.startsWith и str.endsWith проверяют, соответственно, начинается ли и заканчивается ли строка определённой строкой:
+alert( "Widget".startsWith("Wid") ); // true, "Wid" — начало "Widget"
+alert( "Widget".endsWith("get") ); // true, "get" — окончание "Widget"
+
+
+str.slice(start [, end])
+Возвращает часть строки от start до (не включая) end.
+Например:
+let str = "stringify";
+// 'strin', символы от 0 до 5 (не включая 5)
+alert( str.slice(0, 5) );
+// 's', от 0 до 1, не включая 1, т. е. только один символ на позиции 0
+alert( str.slice(0, 1) );
+
+
+let str = "stringify";
+// для substring эти два примера — одинаковы
+alert( str.substring(2, 6) ); // "ring"
+alert( str.substring(6, 2) ); // "ring"
+// …но не для slice:
+alert( str.slice(2, 6) ); // "ring" (то же самое)
+alert( str.slice(6, 2) ); // "" (пустая строка)
+
+
+
+метод	выбирает…	отрицательные значения
+slice(start, end)	от start до end (не включая end)	можно передавать отрицательные значения
+substring(start, end)	между start и end	отрицательные значения равнозначны 0
+substr(start, length)	length символов, начиная от start	значение start может быть отрицательным
+
+
+
+
+
+
+// Методы работы с массивами
+
+
+
+
+
+
+
+
+// квадратные скобки (обычно)
+let arr = [item1, item2...];
+// new Array (очень редко)
+let arr = new Array(item1, item2...);
+
+
+push(...items)добавляет items в конец массива.
+pop() удаляет элемент в конце массива и возвращает его.
+shift() удаляет элемент в начале массива и возвращает его.
+unshift(...items) добавляет items в начало массива.
+
+
+for (let i=0; i<arr.length; i++) – работает быстрее всего, совместим со старыми браузерами.
+for (let item of arr) – современный синтаксис только для значений элементов (к индексам нет доступа).
+for (let i in arr) – никогда не используйте для массивов!
+
+
+let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+// удалить 3 первых элемента и заменить их другими
+arr.splice(0, 3, "Давай", "танцевать");
+alert( arr ) // теперь ["Давай", "танцевать", "прямо", "сейчас"]
+
+
+let arr = ["Я", "изучаю", "JavaScript", "прямо", "сейчас"];
+// удалить 2 первых элемента
+let removed = arr.splice(0, 2);
+alert( removed ); // "Я", "изучаю" <-- массив из удалённых элементов
+
+
+let arr = ["t", "e", "s", "t"];
+alert( arr.slice(1, 3) ); // e,s (копирует с 1 до 3)
+alert( arr.slice(-2) ); // s,t (копирует с -2 до конца)
+
+
+let arr = [1, 2];
+// создать массив из: arr и [3,4]
+alert( arr.concat([3, 4]) ); // 1,2,3,4
+// создать массив из: arr и [3,4] и [5,6]
+alert( arr.concat([3, 4], [5, 6]) ); // 1,2,3,4,5,6
+// создать массив из: arr и [3,4], потом добавить значения 5 и 6
+alert( arr.concat([3, 4], 5, 6) ); // 1,2,3,4,5,6
+
+
+let arr = [1, 2];
+let arrayLike = {
+  0: "что-то",
+  length: 1
+};
+alert( arr.concat(arrayLike) ); // 1,2,[object Object]
+…Но если массивоподобный объект имеет специальное свойство Symbol.isConcatSpreadable, 
+то он обрабатывается как массив, с помощью concat: вместо него добавляются его элементы:
+let arr = [1, 2];
+let arrayLike = {
+  0: "что-то",
+  1: "ещё",
+  [Symbol.isConcatSpreadable]: true,
+  length: 2
+};
+alert( arr.concat(arrayLike) ); // 1,2,что-то,ещё
+
+
+Метод arr.forEach позволяет запускать функцию для каждого элемента массива.
+Его синтаксис:
+arr.forEach(function(item, index, array) {
+  // ... делать что-то с item
+});
+Например, этот код выведет на экран каждый элемент массива:
+// Вызов alert для каждого элемента
+["Bilbo", "Gandalf", "Nazgul"].forEach(alert);
+А этот вдобавок расскажет и о своей позиции в массиве:
+["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+  alert(`${item} имеет позицию ${index} в ${array}`);
+});
+
+
+
+let users = [
+    {id: 1, name: "Вася"},
+    {id: 2, name: "Петя"},
+    {id: 3, name: "Маша"}
+  ];
+  let user = users.find(item => item.id == 1);
+  alert(user.name); // Вася
+
+
+Метод arr.findIndex – по сути, то же самое, но возвращает индекс,
+на котором был найден элемент, а не сам элемент, и -1, если ничего не найдено.
+
+
+
+let users = [
+    {id: 1, name: "Вася"},
+    {id: 2, name: "Петя"},
+    {id: 3, name: "Маша"}
+  ];
+  // озвращает массив, состоящий из двух первых пользователей
+  let someUsers = users.filter(item => item.id < 3);
+  alert(someUsers.length); // 2
+
+
+  let result = arr.map(function(item, index, array) {
+    // возвращается новое значение вместо элемента
+  });
+  Например, здесь мы преобразуем каждый элемент в его длину:
+  let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+  alert(lengths); // 5,7,6
+
+
+function compareNumeric(a, b) {
+  if (a > b) return 1;
+  if (a == b) return 0;
+  if (a < b) return -1;
+let arr = [ 1, 2, 15 ];
+arr.sort(compareNumeric);
+alert(arr);  // 1, 2, 15
+
+
+let arr = [1, 2, 3, 4, 5];
+arr.reverse();
+alert( arr ); // 5,4,3,2,1
+
+
+let names = 'Вася, Петя, Маша';
+let arr = names.split(', ');
+for (let name of arr) {
+  alert( `Сообщение получат: ${name}.` ); // Сообщение получат: Вася (и другие имена)
+
+
+let arr = ['Вася', 'Петя', 'Маша']
+let str = arr.join(';'); // объединить массив в строку через ;
+alert( str ); // Вася;Петя;Маша
+
+
+let arr = [1, 2, 3, 4, 5];
+let result = arr.reduce((sum, current) => sum + current, 0);
+alert(result); // 15
+Метод arr.reduceRight работает аналогично, но проходит по массиву справа налево.
+
+
+push (...items) – добавляет элементы в конец,
+pop() – извлекает элемент с конца,
+shift() – извлекает элемент с начала,
+unshift(...items) – добавляет элементы в начало.
+
+
+
+
+
+
+
+
+
+
+
+//  Методы работы с объектами
+
+
+
+
+
+
+
+
+let range = {
+  from: 1,
+  to: 5,
+  [Symbol.iterator]() {
+    this.current = this.from;
+    return this;
+  },
+  next() {
+    if (this.current <= this.to) {
+      return { done: false, value: this.current++ };
+    } else {
+      return { done: true };
+    }
+  }
+};
+  for (let num of range) {
+  alert(num); // 1, затем 2, 3, 4, 5
+  let str = "Hello";
+  // делает то же самое, что и
+  // for (let char of str) alert(char);
+  let iterator = str[Symbol.iterator]();
+  while (true) {
+    let result = iterator.next();
+    if (result.done) break;
+    alert(result.value); // выводит символы один за другим
+  }
+
+
+Есть универсальный метод Array.from, который принимает итерируемый объект или псевдомассив и делает из него «настоящий» Array. После этого мы уже можем использовать методы массивов.
+
+Например:
+
+let arrayLike = {
+  0: "Hello",
+  1: "World",
+  length: 2
+};
+
+let arr = Array.from(arrayLike); // (*)
+alert(arr.pop()); // World (метод работает)
+let arr = Array.from(range, num => num * num);
+alert(arr); // 1,4,9,16,25
+
+
+Методы и свойства:
+new Map() – создаёт коллекцию.
+map.set(key, value) – записывает по ключу key значение value.
+map.get(key) – возвращает значение по ключу или undefined, если ключ key отсутствует.
+map.has(key) – возвращает true, если ключ key присутствует в коллекции, иначе false.
+map.delete(key) – удаляет элемент по ключу key.
+map.clear() – очищает коллекцию от всех элементов.
+map.size – возвращает текущее количество элементов.
+
+let obj = {
+  name: "John",
+  age: 30
+};
+let map = new Map(Object.entries(obj));
+alert( map.get('name') ); // John
+
+let map = new Map();
+map.set('banana', 1);
+map.set('orange', 2);
+map.set('meat', 4);
+let obj = Object.fromEntries(map.entries()); // создаём обычный объект (*)
+// готово!
+// obj = { banana: 1, orange: 2, meat: 4 }
+alert(obj.orange); // 2
+
+
+new Set(iterable) – создаёт Set, и если в качестве аргумента был предоставлен итерируемый объект (обычно это массив), то копирует его значения в новый Set.
+set.add(value) – добавляет значение (если оно уже есть, то ничего не делает), возвращает тот же объект set.
+set.delete(value) – удаляет значение, возвращает true, если value было в множестве на момент вызова, иначе false.
+set.has(value) – возвращает true, если значение присутствует в множестве, иначе false.
+set.clear() – удаляет все имеющиеся значения.
+set.size – возвращает количество элементов в множестве.
+
+
+
+
+
+
+
+// Наследование 
+
+
+
+
+
+
+
+let animal = {
+  eats: true
+};
+let rabbit = {
+  jumps: true
+};
+
+rabbit.__proto__ = animal; // (*)
+
+// теперь мы можем найти оба свойства в rabbit:
+alert( rabbit.eats ); // true (**)
+alert( rabbit.jumps ); // true
+
+
+let animal = {
+  eats: true
+};
+
+let rabbit = {
+  jumps: true,
+  __proto__: animal
+};
+
+// Object.keys возвращает только собственные ключи
+alert(Object.keys(rabbit)); // jumps
+
+// for..in проходит и по своим, и по унаследованным ключам
+for(let prop in rabbit) alert(prop); // jumps, затем eats

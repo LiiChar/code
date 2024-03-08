@@ -1,0 +1,14 @@
+
+
+.list {
+    height: 40%;
+    font-size: 24px;
+    padding: 0;
+}
+
+.elementList {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

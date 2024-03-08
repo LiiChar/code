@@ -1,0 +1,17 @@
+{
+  "name": "next13-context-platform",
+  "version": "0.2.0",
+  "description": "Create context into dir context by name",
+  "main": "src/index.js",
+  "scripts": {
+    "context:ts": "node src/index_ts.js",
+    "context": "node src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": [],
+  "author": "Ivanov Maksim",
+  "license": "ISC",
+  "files": [
+    "src"
+  ]
+}

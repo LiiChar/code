@@ -1,0 +1,9 @@
+.Post {
+    margin-left: 10px;
+    width: 80%;
+}
+
+.Btn {
+    align-self: flex-end;
+    margin-right: 9vw;
+}

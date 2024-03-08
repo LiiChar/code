@@ -1,0 +1,21 @@
+.loading {
+    width: 100px;
+    height: 100px;
+    border-top: 7px solid rgb(68, 0, 255) ;
+    border-left: 7px solid rgb(229, 255, 0) ;
+    border-right: 7px solid rgb(9, 255, 0) ;
+    border-bottom: 7px solid rgb(255, 0, 0) ;
+    color: none;
+    animation: 10s linear gods;
+    border-radius: 50%;
+}
+
+@keyframes gods {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

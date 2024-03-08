@@ -1,0 +1,63 @@
+
+
+.modalDisheWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100vw - 8px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.40);
+}
+
+.modalDishe {
+    width: 50vw;
+    background-color: #fff;
+}
+
+.modalDisheImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modalDisheActions {
+    
+}
+
+.modalDisheFollow {
+    
+}
+
+.modalDisheClose {
+    
+}
+
+.modalDisheName {
+    
+}
+
+.modalDisheData {
+    display: flex;
+    flex-direction: row;
+}
+
+.modalDishePrice {
+    
+}
+
+.modalDisheWight {
+    
+}
+
+.modalDisheDescription {
+    
+}
+
+.modalDisheWightAddToBusket {
+    
+}

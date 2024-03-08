@@ -1,0 +1,13 @@
+
+
+.messages {
+    background-color:rgb(255, 172, 172);
+    grid-area: ma;
+}
+
+.Btn {
+    width: 60px;
+    height: 25px;
+}
+
+

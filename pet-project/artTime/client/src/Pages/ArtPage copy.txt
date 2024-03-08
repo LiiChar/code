@@ -1,0 +1,46 @@
+// import React, { useEffect, useState, useRef, MouseEvent } from 'react'
+// import { IPoint } from '../store/model/model';
+
+
+// export const ArtPage = () => {
+//   const canvasRef = useRef<HTMLCanvasElement>(null)
+//   let ctx: CanvasRenderingContext2D | null;
+
+//   if (canvasRef.current) {
+//     ctx = canvasRef.current.getContext('2d')
+//   }
+
+//   let points: IPoint = {
+//     userId: 'anom',
+//     point: [{x: 1, y: 0}]
+//   }
+
+//   useEffect(() => {
+//     draw()
+//   }, [])
+
+//   useEffect(() => {
+//     document.addEventListener('click', drawPoint)
+//     return () => {
+//       document.removeEventListener('click', drawPoint)
+//     }
+//   }, [])
+
+//   function drawPoint(event: MouseEvent): void {
+//     points.point.push({x: event.clientX, y: event.clientY})
+//   }
+
+
+//   function draw() {
+//     for (let i = 0; i < points.point.length ; i ++) {
+//       ctx?.fillRect(points.point[i].x, points.point[i].y, 10, 10)
+//     }
+//     requestAnimationFrame(draw)
+//   }
+
+
+
+//   return (
+//     <canvas width={window.innerWidth} height={window.innerHeight} ref={canvasRef}></canvas>
+//   )
+// }

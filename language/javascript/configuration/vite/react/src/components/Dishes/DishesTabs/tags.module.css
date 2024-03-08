@@ -1,0 +1,15 @@
+.tags {
+   display: flex; 
+   justify-content: space-between;
+   margin: 10px 20px;
+   height: 5vh;
+}
+
+.tagsCard {
+    width: 20%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-color: #3364E0;
+    color: white;
+} 

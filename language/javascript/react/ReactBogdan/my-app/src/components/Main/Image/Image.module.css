@@ -1,0 +1,25 @@
+.ImgBack {
+    height: 200px;
+    width: 100%;
+}
+
+.ImgLogo {
+    margin: 5px 10px;
+
+    height: 100px;
+    width: 100px;
+}
+
+.ImgLogoHeader {
+    margin: 5px 5px;
+
+    height: 50px;
+    width: 50px;
+}
+
+.ImgFriends {
+    margin: 5px 5px;
+
+    height: 50px;
+    width: 50px;
+}

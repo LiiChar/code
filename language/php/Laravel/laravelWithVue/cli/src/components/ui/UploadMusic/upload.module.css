@@ -1,0 +1,24 @@
+.wrapperModalUpload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3636365e;
+}
+
+.modalUpload {
+    font-size: 14px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    width: 40%;
+    height: max-content;
+}
+
+.underLine {
+    border-bottom: 1px solid black;
+    margin-bottom: 8px;
+}

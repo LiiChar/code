@@ -1,0 +1,110 @@
+@import '../../app.module.scss';
+
+.headerWrapper {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.activeLink {
+    // font-size: xx-large;
+    transform: scale(1.2);
+    transition: all 200ms ease-in-out;
+}
+
+.link {
+    color: black;
+}
+.linkDark {
+    color: white;
+}
+
+
+.wrapperLinks {
+    display: flex;
+    font-size: x-large;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+}
+
+.nameSite {
+    margin-left: 60px;
+    left: 0;
+    position: fixed;
+    font-size: 60px;
+}
+
+.hello {
+    height: 95px;
+    color: white;
+    z-index: 100;
+    right: 0;
+    margin-right: 80px;
+    position: fixed;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.roudedAnim {
+    cursor: pointer;
+    border: 1.5px solid #241E1E;
+    position: absolute;
+    background: #241E1E;
+    opacity: .6;
+    border-radius: 40% 42% 45% 55%;
+    
+    width: 70px;
+    height: 70px;
+    z-index: -1;
+}
+
+.goTo {
+    animation: go 5200ms infinite linear;
+}
+
+.goBack {
+    animation: revertGo 5200ms infinite linear;
+}
+
+@keyframes go {
+    from {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+      to {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+}
+
+@keyframes revertGo {
+    from {
+        -ms-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+      to {
+        -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+}

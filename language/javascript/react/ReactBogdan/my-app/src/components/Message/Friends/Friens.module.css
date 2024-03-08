@@ -1,0 +1,5 @@
+.dialogs {
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+}

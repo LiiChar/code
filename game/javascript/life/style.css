@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* background-color: black; */
+}
+
+#canvas {
+    width: 100vw;
+    height: 99vh;
+    /* width: 99vw;
+    height: 98vh; */
+    /* width: 700;
+    height: 500; */
+}

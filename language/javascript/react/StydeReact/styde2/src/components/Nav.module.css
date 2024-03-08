@@ -1,0 +1,10 @@
+.active {
+    color: red; 
+    text-decoration: none;
+    margin-right: 30px;
+}
+
+.active:hover{
+    color: aquamarine;
+    text-decoration: double;
+}

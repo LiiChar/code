@@ -1,0 +1,21 @@
+.ulProduct{
+    position: absolute;
+    margin: 0;
+    z-index: 10000;
+    display: none;
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin-top: 5px;
+    background-color: rgba(0, 100, 0, 0);
+    width: 90%;
+    height: 100px;
+    overflow: auto;
+    padding: 0;
+    
+}
+.liProduct1 {
+    list-style-type: none;
+}
+.liProduct2 {
+    list-style-type: none;
+}

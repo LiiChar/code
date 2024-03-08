@@ -1,0 +1,31 @@
+.Mes {
+    grid-area: m;
+    background-color: rgb(255, 172, 172);
+    height: 100%;
+    display: grid;
+
+    grid-template-areas: 
+    'f ma ma ma';
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:focus{
+    color: aqua;
+}
+
+.messages:nth-child(odd) {
+    position: relative;
+    right: 0px;
+}
+
+
+.Btn {
+    width: 100px;
+    height: 50px;
+}
+
+
